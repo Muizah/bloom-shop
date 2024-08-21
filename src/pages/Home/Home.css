@@ -1,0 +1,56 @@
+.main{
+  background-color: #B9FFAD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  align-items: center;
+}
+
+.icons, .current{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.bloom{
+  color:#5da950;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.women, .men, .kids{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.women a, .men a, .kids a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: large;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+.header a.active-link {
+  font-weight: 700; 
+}
+
+.main{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+}
