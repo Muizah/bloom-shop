@@ -1,0 +1,59 @@
+.men-container .main{
+    background-color: #B9FFAD;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 0 5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.men-container .main .fa-regular{
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.images{
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 23rem;
+}
+
+button{
+    background-color: #5da950;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.imgs{
+    height: 23rem;
+    width: 17rem;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    padding: 1rem 0;
+}
+
+.text p{
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+.container-one, .container-two, .container-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -18,8 +18,8 @@ const Home: React.FC = () => {
 
         <div className='current'>
           <Link to="/" className={currentPath === '/' ? 'active-link' : ''}>Home</Link>
-          <Link to="/women" className={currentPath === '/women' ? 'active-link' : ''}>Women</Link>
           <Link to="/men" className={currentPath === '/men' ? 'active-link' : ''}>Men</Link>
+          <Link to="/women" className={currentPath === '/women' ? 'active-link' : ''}>Women</Link>
           <Link to="/kids" className={currentPath === '/kids' ? 'active-link' : ''}>Kids</Link>
         </div>
 
