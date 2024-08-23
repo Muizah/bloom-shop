@@ -1,0 +1,44 @@
+.women-container .main{
+    background-color: #B9FFAD;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-around;
+    padding: 0 5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.women-container .images{
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    height: 23rem;
+}
+
+.women-container button{
+    background-color: #5da950;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.women-container .imgs{
+    height: 23rem;
+    width: 19rem;
+}
+
+.women-container .text{
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    padding: 1rem 0;
+}
+
+.women-container .text p{
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
