@@ -1,13 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import redGown from './Assets/Desktop/redGown.png';
-import brownGown from './Assets/Desktop/brownGown.png';
-import shoe from './Assets/Desktop/shoe.png';
+import redDress from './Assets/Desktop/redDress.png';
+import brownDress from './Assets/Desktop/brownDress.png';
+import heels from './Assets/Desktop/heels.png';
 import './Women.css'; 
+
+type Item = {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+};
 
 const Women: React.FC = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+
+  const [heartedItems, setHeartedItems] = useState<number[]>([]);
+  const [cart, setCart] = useState<Item[]>([]);
+
+  const items: Item[] = [
+    { id: 1, name: 'Red Dress with Slit', price: '₦16,500', image: redDress },
+    { id: 2, name: 'PVC Rhinestones Decor Peep Toe Stiletto Slingback pumps', price: '₦23,500', image: heels },
+    { id: 3, name: 'Brown Tie Midi Dress', price: '₦50,000', image: brownDress },
+  ];
+
+  const toggleHeart = (id: number, item: Item) => {
+   if (heartedItems.includes(id)) {
+    // If already hearted, remove from hearted items
+    setHeartedItems(heartedItems.filter(itemId => itemId !== id));
+  } else {
+    // If not hearted, add to hearted items and add to cart
+    setHeartedItems([...heartedItems, id]);
+    setCart([...cart, item]);
+   }
+};
 
   return (
     <div className="women-container">
@@ -23,48 +50,28 @@ const Women: React.FC = () => {
         </div>
 
         <div className='icons'>
-          <p><i className="fa fa-shopping-cart" aria-hidden="true"></i></p>
+          <p><i className="fa-regular fa-shopping-cart" aria-hidden="true"></i></p>
           <p><i className="fa-regular fa-heart"></i></p>
         </div>
       </header>
-      <main className="main">
-        <div className="container-one">
-          <div className="images">
-            <img src={redGown} alt="" className='imgs'/>
+      <main className='main'>
+        {items.map(item => (
+          <div className='container' key={item.id}>
+            <div className='images'>
+              <img src={item.image} alt={item.name} className='imgs' />
+              <p onClick={() => toggleHeart(item.id, item)}>
+                <i className={heartedItems.includes(item.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}></i>
+              </p>
+            </div>
+            <div className='text'>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
+            </div>
+            <div>
+              <button onClick={() => setCart([...cart, item])}>Add to Cart</button>
+            </div>
           </div>
-          <div className="text">
-            <p>Red Dress with Slit</p>
-            <p>₦16,500</p>
-          </div>
-          <div>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-        
-        <div className="container-two">
-          <div className="images">
-            <img src={shoe} alt="" className='imgs'/>
-          </div>
-          <div className="text">
-            <p>PVC Rhinestones Decor Peep Toe Stiletto Slingback pumps</p>
-            <p>₦23,500</p>
-          </div>
-          <div>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-        <div className="container-three">
-          <div className="images">
-            <img src={brownGown} alt="" className='imgs'/>
-          </div>
-          <div className="text">
-            <p>Brown Tie Midi Dress</p>
-            <p>₦50,000</p>
-          </div>
-          <div>
-            <button>Add to Cart</button>
-          </div>
-        </div>
+        ))}
       </main>
     </div>
   );

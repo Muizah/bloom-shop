@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className='icons'>
-          <p><i className="fa fa-shopping-cart" aria-hidden="true"></i></p>
+          <p><i className="fa-regular fa-shopping-cart" aria-hidden="true"></i></p>
           <p><i className="fa-regular fa-heart"></i></p>
         </div>
       </header>

@@ -8,7 +8,7 @@
     padding-bottom: 2rem;
 }
 
-.men-container .main .fa-regular{
+.men-container .main .fa-regular, .main .fa-heart:before{
     font-size: 4rem;
     position: absolute;
     top: 0;
@@ -17,7 +17,7 @@
 
 .men-container .images{
     display: flex;
-    background-color: #ffffff;
+    background-color: rgb(245, 236, 236);
     align-items: center;
     justify-content: center;
     position: relative;

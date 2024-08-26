@@ -1,0 +1,58 @@
+.kids-container .main{
+    background-color: #B9FFAD;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-around;
+    padding: 0 5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.kids-container .main .fa-regular, .main .fa-heart:before{
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.kids-container .images{
+    display: flex;
+    background-color: rgb(245, 236, 236);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 23rem;
+}
+
+.kids-container button{
+    background-color: #5da950;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.kids-container .imgs{
+    height: 23rem;
+    width: 19rem;
+}
+
+.kids-container .text{
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    padding: 1rem 0;
+}
+
+.kids-container .text p{
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+.kids-container .container-one, .kids-container .container-two, .kids-container .container-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

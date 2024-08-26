@@ -8,11 +8,19 @@
     padding-bottom: 2rem;
 }
 
+.women-container .main .fa-regular, .main .fa-heart:before{
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .women-container .images{
     display: flex;
-    background-color: #ffffff;
+    background-color: rgb(245, 236, 236);
     align-items: center;
     justify-content: center;
+    position: relative;
     height: 23rem;
 }
 
@@ -41,4 +49,10 @@
     font-size: larger;
     margin: 0;
     padding: 0;
+}
+
+.women-container .container-one, .women-container .container-two, .women-container .container-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
